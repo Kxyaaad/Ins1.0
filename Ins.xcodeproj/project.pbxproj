@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ADB9EEF1D251ED827044BE7 /* Pods_Ins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B89BC0686AC548C0273AD7 /* Pods_Ins.framework */; };
+		88A687A520CEB46D00C2D840 /* LogeInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A687A420CEB46D00C2D840 /* LogeInController.swift */; };
 		D304CF5120CE403F0068D954 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304CF5020CE403F0068D954 /* AppDelegate.swift */; };
 		D304CF5320CE403F0068D954 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304CF5220CE403F0068D954 /* ViewController.swift */; };
 		D304CF5620CE403F0068D954 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304CF5420CE403F0068D954 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		28AE8029F45B60E6B15E7409 /* Pods-Ins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ins/Pods-Ins.debug.xcconfig"; sourceTree = "<group>"; };
+		88A687A420CEB46D00C2D840 /* LogeInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogeInController.swift; sourceTree = "<group>"; };
 		A1B89BC0686AC548C0273AD7 /* Pods_Ins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304CF4D20CE403F0068D954 /* Ins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304CF5020CE403F0068D954 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88A687A320CEB43D00C2D840 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D304CF5220CE403F0068D954 /* ViewController.swift */,
+				88A687A420CEB46D00C2D840 /* LogeInController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B1F3E5120E398E8F8E472292 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,8 +81,8 @@
 		D304CF4F20CE403F0068D954 /* Ins */ = {
 			isa = PBXGroup;
 			children = (
+				88A687A320CEB43D00C2D840 /* Views */,
 				D304CF5020CE403F0068D954 /* AppDelegate.swift */,
-				D304CF5220CE403F0068D954 /* ViewController.swift */,
 				D304CF5420CE403F0068D954 /* Main.storyboard */,
 				D304CF5720CE40490068D954 /* Assets.xcassets */,
 				D304CF5920CE40490068D954 /* LaunchScreen.storyboard */,
@@ -202,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A687A520CEB46D00C2D840 /* LogeInController.swift in Sources */,
 				D304CF5320CE403F0068D954 /* ViewController.swift in Sources */,
 				D304CF5120CE403F0068D954 /* AppDelegate.swift in Sources */,
 			);
