@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ADB9EEF1D251ED827044BE7 /* Pods_Ins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B89BC0686AC548C0273AD7 /* Pods_Ins.framework */; };
+		8816E90220CFEE70000CD733 /* SiginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816E90120CFEE70000CD733 /* SiginController.swift */; };
 		88A687A520CEB46D00C2D840 /* LogeInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A687A420CEB46D00C2D840 /* LogeInController.swift */; };
 		D304CF5120CE403F0068D954 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304CF5020CE403F0068D954 /* AppDelegate.swift */; };
 		D304CF5320CE403F0068D954 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304CF5220CE403F0068D954 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		28AE8029F45B60E6B15E7409 /* Pods-Ins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ins/Pods-Ins.debug.xcconfig"; sourceTree = "<group>"; };
+		8816E90120CFEE70000CD733 /* SiginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginController.swift; sourceTree = "<group>"; };
 		88A687A420CEB46D00C2D840 /* LogeInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogeInController.swift; sourceTree = "<group>"; };
 		A1B89BC0686AC548C0273AD7 /* Pods_Ins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304CF4D20CE403F0068D954 /* Ins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ins.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,7 @@
 			children = (
 				D304CF5220CE403F0068D954 /* ViewController.swift */,
 				88A687A420CEB46D00C2D840 /* LogeInController.swift */,
+				8816E90120CFEE70000CD733 /* SiginController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				88A687A520CEB46D00C2D840 /* LogeInController.swift in Sources */,
 				D304CF5320CE403F0068D954 /* ViewController.swift in Sources */,
+				8816E90220CFEE70000CD733 /* SiginController.swift in Sources */,
 				D304CF5120CE403F0068D954 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
