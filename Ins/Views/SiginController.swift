@@ -9,7 +9,7 @@
 import UIKit
 import NotificationCenter
 
-class SiginController: UIViewController,UITextFieldDelegate {
+class SiginController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var img: UIImageView!
     
@@ -17,7 +17,9 @@ class SiginController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var password2th: UITextField!
     @IBOutlet weak var email: UITextField!
+ 
     
+    @IBOutlet var tapGes: UITapGestureRecognizer!
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var jianjie: UITextField!
@@ -44,6 +46,9 @@ class SiginController: UIViewController,UITextFieldDelegate {
         self.jianjie.delegate = self
         self.websit.delegate = self
         
+        self.img.layer.cornerRadius = self.img.frame.width/2
+        self.img.isUserInteractionEnabled = true
+        self.img.addGestureRecognizer(tapGes)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -60,6 +65,11 @@ class SiginController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func zhcue(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -71,7 +81,6 @@ class SiginController: UIViewController,UITextFieldDelegate {
         let rect = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
         keyboardsize = rect as? CGRect
         print(keyboardsize)
-        
         //当虚拟键盘出现以后，将滚动师徒的实际高度所有为屏幕高度减去键盘的高度
         UIView.animate(withDuration: 0.4) {
             self.scview.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height:  (self.scview.frame.height - self.keyboardsize.height))
@@ -84,6 +93,23 @@ class SiginController: UIViewController,UITextFieldDelegate {
             self.scview.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height:  self.view.frame.height)
         }
         
+    }
+    //点击头像，弹出照片选择
+    @IBAction func tapPhoto(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+    //选择的照片作为头
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        self.img.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    }
+    //若点击取消则退出界面
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

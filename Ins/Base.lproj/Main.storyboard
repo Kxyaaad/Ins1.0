@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7eS-jD-SPh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7eS-jD-SPh">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,8 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-pq-G3x">
-                                <rect key="frame" x="62" y="189" width="250" height="81"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-pq-G3x">
+                                <rect key="frame" x="62" y="236" width="250" height="81"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sju-iJ-xLD">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -49,12 +48,12 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="1aE-yp-Hmx"/>
                                     <constraint firstAttribute="width" constant="250" id="kxm-Xf-bEd"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0T-Ck-2od">
-                                <rect key="frame" x="62" y="288" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0T-Ck-2od">
+                                <rect key="frame" x="62" y="335" width="77" height="30"/>
                                 <state key="normal" title="忘记密码？">
                                     <color key="titleColor" red="0.12268845266464878" green="0.67761102112364091" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -62,9 +61,8 @@
                                     <action selector="findPWact:" destination="7eS-jD-SPh" eventType="touchUpInside" id="7bC-6T-evw"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-0U-vMF">
-                                <rect key="frame" x="95" y="347" width="185" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-0U-vMF">
+                                <rect key="frame" x="95" y="404" width="185" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-9o-fC1">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
@@ -86,9 +84,21 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="Qkw-nc-4xv"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R0T-Ck-2od" firstAttribute="top" secondItem="B1g-pq-G3x" secondAttribute="bottom" constant="18" id="8II-ka-yE0"/>
+                            <constraint firstItem="GzA-0U-vMF" firstAttribute="centerX" secondItem="7VB-au-uMJ" secondAttribute="centerX" id="DrS-At-UV6"/>
+                            <constraint firstItem="GzA-0U-vMF" firstAttribute="top" secondItem="R0T-Ck-2od" secondAttribute="bottom" constant="39" id="TxR-eD-ho5"/>
+                            <constraint firstItem="R0T-Ck-2od" firstAttribute="leading" secondItem="7VB-au-uMJ" secondAttribute="leading" constant="62" id="gfB-gs-nvc"/>
+                            <constraint firstItem="B1g-pq-G3x" firstAttribute="leading" secondItem="7VB-au-uMJ" secondAttribute="leading" constant="62" id="mks-Ey-ELK"/>
+                            <constraint firstItem="B1g-pq-G3x" firstAttribute="top" secondItem="7VB-au-uMJ" secondAttribute="top" constant="192" id="ryt-vo-aLY"/>
+                            <constraint firstItem="7VB-au-uMJ" firstAttribute="trailing" secondItem="B1g-pq-G3x" secondAttribute="trailing" constant="63" id="t96-YN-hRn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7VB-au-uMJ"/>
                     </view>
                     <connections>
@@ -114,15 +124,34 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-z2-cmk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgz-KZ-wU8">
+                                        <rect key="frame" x="172" y="628" width="31" height="30"/>
+                                        <state key="normal" title="确定"/>
+                                        <connections>
+                                            <action selector="zhcue:" destination="p33-hA-RSE" eventType="touchUpInside" id="Jvq-B1-5SZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJf-ab-QFp">
+                                        <rect key="frame" x="172" y="666" width="31" height="30"/>
+                                        <state key="normal" title="取消"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="p33-hA-RSE" eventType="touchUpInside" id="b0s-Yb-H6t"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1Eb-wK-8Xk">
-                                        <rect key="frame" x="62.666666666666657" y="59" width="249.99999999999997" height="510"/>
+                                        <rect key="frame" x="62" y="59" width="250" height="510"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-rF-VEL">
                                                 <rect key="frame" x="75" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" red="0.68627450980000004" green="0.78039215689999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="K9Q-Uj-pvm"/>
                                                     <constraint firstAttribute="height" constant="100" id="Uhr-qY-iSd"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="h2Y-st-i7k" appends="YES" id="1WA-cZ-8de"/>
+                                                </connections>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UCS-ev-abj">
                                                 <rect key="frame" x="0.0" y="150" width="250" height="168"/>
@@ -195,20 +224,6 @@
                                             <constraint firstItem="RvL-Kz-apP" firstAttribute="height" secondItem="gRc-GR-90g" secondAttribute="height" id="xQb-CB-vrJ"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgz-KZ-wU8">
-                                        <rect key="frame" x="172" y="628" width="31" height="30"/>
-                                        <state key="normal" title="确定"/>
-                                        <connections>
-                                            <action selector="zhcue:" destination="p33-hA-RSE" eventType="touchUpInside" id="Jvq-B1-5SZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJf-ab-QFp">
-                                        <rect key="frame" x="172" y="666" width="31" height="30"/>
-                                        <state key="normal" title="取消"/>
-                                        <connections>
-                                            <action selector="cancel:" destination="p33-hA-RSE" eventType="touchUpInside" id="b0s-Yb-H6t"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Sgz-KZ-wU8" firstAttribute="leading" secondItem="pJf-ab-QFp" secondAttribute="leading" id="0Kd-wN-9DW"/>
@@ -242,11 +257,17 @@
                         <outlet property="password" destination="4Oy-t5-r61" id="UGf-HT-cp8"/>
                         <outlet property="password2th" destination="mM2-Wc-uAV" id="nOr-cW-Ze3"/>
                         <outlet property="scview" destination="fG0-z2-cmk" id="phH-WK-CUu"/>
+                        <outlet property="tapGes" destination="h2Y-st-i7k" id="X1g-RD-vQB"/>
                         <outlet property="username" destination="crN-yf-r0Q" id="fd5-sh-1iz"/>
                         <outlet property="websit" destination="TMo-Eo-sZT" id="ahv-rC-sVi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMW-d1-rBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="h2Y-st-i7k">
+                    <connections>
+                        <action selector="tapPhoto:" destination="p33-hA-RSE" id="1PW-Z1-Uz9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="789.60000000000002" y="-638.42364532019712"/>
         </scene>
