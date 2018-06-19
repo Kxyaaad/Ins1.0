@@ -1,0 +1,6 @@
+framework module Pods_Ins {
+  umbrella header "Pods-Ins-umbrella.h"
+
+  export *
+  module * { export * }
+}
