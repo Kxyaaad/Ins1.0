@@ -13,11 +13,16 @@ import AVOSCloud
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let userdef = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         AVOSCloud.setApplicationId("zBmbP7qFd9riqqMOmdv1XE04-gzGzoHsz", clientKey: "GIdD6Bn9jDPWsPRFQoSz9YK4")
+        if userdef.string(forKey: "username") != nil {
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabView = storyboard.instantiateViewController(withIdentifier: "TabView") as! TabBarController
+            self.window?.rootViewController = tabView
+        }
         return true
     }
 

@@ -304,7 +304,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="8XP-Ks-mpv">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1Xc-Xw-PeO" customClass="TabBarController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabView" automaticallyAdjustsScrollViewInsets="NO" id="1Xc-Xw-PeO" customClass="TabBarController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4XJ-px-CW9">
                         <autoresizingMask key="autoresizingMask"/>
