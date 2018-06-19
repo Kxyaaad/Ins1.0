@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LeanCloud
+import AVOSCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        LeanCloud.initialize(applicationID: "zBmbP7qFd9riqqMOmdv1XE04-gzGzoHsz", applicationKey: "GIdD6Bn9jDPWsPRFQoSz9YK4")
+        AVOSCloud.setApplicationId("zBmbP7qFd9riqqMOmdv1XE04-gzGzoHsz", clientKey: "GIdD6Bn9jDPWsPRFQoSz9YK4")
         return true
     }
 

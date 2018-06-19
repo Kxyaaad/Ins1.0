@@ -6,5 +6,6 @@ target 'Ins' do
   use_frameworks!
 
   # Pods for Ins
-  pod 'LeanCloud'
+  pod 'AVOSCloud'              
+  pod 'AVOSCloudIM'
 end

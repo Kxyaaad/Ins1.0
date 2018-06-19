@@ -16,12 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="哈哈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsm-8Y-6DA">
+                                <rect key="frame" x="166" y="327" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3xf-vC-iJN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2674.4000000000001" y="37.684729064039409"/>
         </scene>
         <!--Loge In Controller-->
         <scene sceneID="Sg3-ZE-sVm">
@@ -141,9 +152,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1Eb-wK-8Xk">
                                         <rect key="frame" x="62" y="59" width="250" height="510"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-rF-VEL">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="修改头像" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-rF-VEL">
                                                 <rect key="frame" x="75" y="0.0" width="100" height="100"/>
-                                                <color key="backgroundColor" red="0.68627450980000004" green="0.78039215689999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="K9Q-Uj-pvm"/>
@@ -169,25 +179,29 @@
                                                         <rect key="frame" x="0.0" y="46" width="250" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mM2-Wc-uAV">
                                                         <rect key="frame" x="0.0" y="92" width="250" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电子邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-GR-90g">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-hL-bbU">
                                                         <rect key="frame" x="0.0" y="138" width="250" height="30"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电子邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-GR-90g">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="4Oy-t5-r61" firstAttribute="height" secondItem="crN-yf-r0Q" secondAttribute="height" id="RcO-xE-HTy"/>
                                                     <constraint firstAttribute="width" constant="250" id="XrD-zC-TEK"/>
-                                                    <constraint firstItem="gRc-GR-90g" firstAttribute="height" secondItem="mM2-Wc-uAV" secondAttribute="height" id="aae-5g-3Sl"/>
                                                     <constraint firstItem="mM2-Wc-uAV" firstAttribute="height" secondItem="4Oy-t5-r61" secondAttribute="height" id="r1l-j9-UcR"/>
                                                 </constraints>
                                             </stackView>
@@ -220,9 +234,6 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="RvL-Kz-apP" firstAttribute="height" secondItem="gRc-GR-90g" secondAttribute="height" id="xQb-CB-vrJ"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -271,5 +282,44 @@
             </objects>
             <point key="canvasLocation" x="789.60000000000002" y="-638.42364532019712"/>
         </scene>
+        <!--主页-->
+        <scene sceneID="3zU-d1-fyZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YW3-y7-rJS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="主页" id="LIe-vQ-lXq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tai-gS-YkU">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vdx-ca-9HX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feu-ZE-lta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="37.684729064039409"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8XP-Ks-mpv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1Xc-Xw-PeO" customClass="TabBarController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4XJ-px-CW9">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YW3-y7-rJS" kind="relationship" relationship="viewControllers" id="f9V-rL-DNu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHx-wZ-Rsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="37.684729064039409"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="修改头像" width="128" height="128"/>
+    </resources>
 </document>

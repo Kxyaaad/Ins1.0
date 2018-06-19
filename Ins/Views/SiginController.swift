@@ -8,9 +8,9 @@
 
 import UIKit
 import NotificationCenter
-
+import AVOSCloud
 class SiginController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-    
+    let userdef = UserDefaults.standard
     @IBOutlet weak var img: UIImageView!
     
     @IBOutlet weak var username: UITextField!
@@ -65,11 +65,54 @@ class SiginController: UIViewController,UITextFieldDelegate,UIImagePickerControl
     }
     
     @IBAction func zhcue(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = .photoLibrary
-        picker.allowsEditing = true
-        present(picker, animated: true, completion: nil)
+        if self.username.text!.isEmpty || self.password.text!.isEmpty || self.password2th.text!.isEmpty || self.email.text!.isEmpty {
+            let alt = UIAlertController(title: "请注意", message: "有必填项目未填写", preferredStyle: .alert)
+            let act = UIAlertAction(title: "确定", style: .default, handler: nil)
+            alt.addAction(act)
+            self.present(alt, animated: true, completion: nil)
+        }else {
+            if self.password2th.text != self.password.text  {
+                let alt = UIAlertController(title: "请注意", message: "两次输入的密码不一致", preferredStyle: .alert)
+                let act = UIAlertAction(title: "确定", style: .default, handler: nil)
+                alt.addAction(act)
+                self.present(alt, animated: true, completion: nil)
+            }else{
+                let user = AVUser()
+                user.username = self.username.text!
+                user.password = self.password2th.text!
+                user.email = self.email.text!
+                user["Jianjie"] = self.jianjie.text!
+                user["Truename"] = self.name.text!
+                user["website"] = self.websit.text!
+                AVUser.requestEmailVerify(self.email.text!) { (result, error) in
+                    if result {
+                        print("发送验证成功")
+                    }else{
+                        print(error)
+                    }
+                }
+                let imgdata = UIImageJPEGRepresentation(self.img.image!, 0.5)
+                let AVfile = AVFile(data: imgdata!, name: "头像")
+                user["image"] = AVfile
+                user.signUpInBackground { (result, error) in
+             
+                    if result {
+                        self.userdef.set(self.username.text!, forKey: "username")
+                        let alt = UIAlertController(title: "注册成功", message: "", preferredStyle: .alert)
+                        let act = UIAlertAction(title: "确定", style: .default, handler: { (_) in
+                            self.presentingViewController?.dismiss(animated: true, completion: nil)
+                        })
+                        alt.addAction(act)
+                        self.present(alt, animated: true, completion: nil)
+                    }else {
+                        print(error)
+                        print("错误描述",error.debugDescription)
+                    }
+                }
+                
+            }
+        }
+       
     }
     
     @IBAction func cancel(_ sender: Any) {
