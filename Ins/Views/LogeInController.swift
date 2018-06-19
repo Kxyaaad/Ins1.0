@@ -43,19 +43,11 @@ class LogeInController: UIViewController {
                         let alt = UIAlertController(title: "请注意", message: "有必填项目未填写", preferredStyle: .alert)
                         let act = UIAlertAction(title: "确定", style: .cancel, handler: nil)
                         let act2 = UIAlertAction(title: "发送验证码", style: .default, handler: { (_) in
-                            let user = AVUser()
-                            let user1 = AVQuery.init(className: "_User")
-                            
-                            
-                            
-                           
-                            AVUser.requestEmailVerify(user1!, with: { (result, error) in
-                                if result {
-                                    print("success")
-                                }else{
-                                    print(error,"helo")
-                                }
-                            })
+                            let user = AVUser.current()
+                            let user1 = AVQuery(className: "test")
+                            user1.whereKey("name", contains: "de")
+                        
+                      
                         })
                         alt.addAction(act)
                         alt.addAction(act2)
