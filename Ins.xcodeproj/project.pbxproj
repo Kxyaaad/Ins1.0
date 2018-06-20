@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0ADB9EEF1D251ED827044BE7 /* Pods_Ins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B89BC0686AC548C0273AD7 /* Pods_Ins.framework */; };
 		8816E90220CFEE70000CD733 /* SiginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816E90120CFEE70000CD733 /* SiginController.swift */; };
+		883BEAA020DA91D9000CCA5B /* MeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883BEA9F20DA91D9000CCA5B /* MeController.swift */; };
+		883BEAA220DA91FC000CCA5B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883BEAA120DA91FC000CCA5B /* HeaderView.swift */; };
+		883BEAA420DA9359000CCA5B /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883BEAA320DA9359000CCA5B /* PictureCell.swift */; };
 		88A687A520CEB46D00C2D840 /* LogeInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A687A420CEB46D00C2D840 /* LogeInController.swift */; };
 		D304CF5120CE403F0068D954 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304CF5020CE403F0068D954 /* AppDelegate.swift */; };
 		D304CF5320CE403F0068D954 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304CF5220CE403F0068D954 /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		28AE8029F45B60E6B15E7409 /* Pods-Ins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ins/Pods-Ins.debug.xcconfig"; sourceTree = "<group>"; };
 		8816E90120CFEE70000CD733 /* SiginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginController.swift; sourceTree = "<group>"; };
+		883BEA9F20DA91D9000CCA5B /* MeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeController.swift; sourceTree = "<group>"; };
+		883BEAA120DA91FC000CCA5B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		883BEAA320DA9359000CCA5B /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		88A687A420CEB46D00C2D840 /* LogeInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogeInController.swift; sourceTree = "<group>"; };
 		A1B89BC0686AC548C0273AD7 /* Pods_Ins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304CF4D20CE403F0068D954 /* Ins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ins.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,9 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		883BEAA520DA93BD000CCA5B /* MECONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				883BEA9F20DA91D9000CCA5B /* MeController.swift */,
+				883BEAA120DA91FC000CCA5B /* HeaderView.swift */,
+				883BEAA320DA9359000CCA5B /* PictureCell.swift */,
+			);
+			path = MECONTROLLER;
+			sourceTree = "<group>";
+		};
 		88A687A320CEB43D00C2D840 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				883BEAA520DA93BD000CCA5B /* MECONTROLLER */,
 				D304CF5220CE403F0068D954 /* ViewController.swift */,
 				88A687A420CEB46D00C2D840 /* LogeInController.swift */,
 				8816E90120CFEE70000CD733 /* SiginController.swift */,
@@ -245,8 +262,11 @@
 				D304CF5320CE403F0068D954 /* ViewController.swift in Sources */,
 				D3B8C3B420D9F50600C1C0B0 /* ReSetPWController.swift in Sources */,
 				8816E90220CFEE70000CD733 /* SiginController.swift in Sources */,
+				883BEAA020DA91D9000CCA5B /* MeController.swift in Sources */,
+				883BEAA420DA9359000CCA5B /* PictureCell.swift in Sources */,
 				D3B4ED6F20D8EF4700AAA439 /* TabBarController.swift in Sources */,
 				D304CF5120CE403F0068D954 /* AppDelegate.swift in Sources */,
+				883BEAA220DA91FC000CCA5B /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
