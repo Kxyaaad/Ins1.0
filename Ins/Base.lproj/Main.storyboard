@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7eS-jD-SPh">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="哈哈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsm-8Y-6DA">
@@ -24,6 +24,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rde-t7-ubD">
+                                <rect key="frame" x="160" y="405" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZr-rg-X6e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,83 +40,96 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674.4000000000001" y="37.684729064039409"/>
+            <point key="canvasLocation" x="2519" y="72"/>
         </scene>
         <!--Loge In Controller-->
         <scene sceneID="Sg3-ZE-sVm">
             <objects>
-                <viewController id="7eS-jD-SPh" customClass="LogeInController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LOGIN" id="7eS-jD-SPh" customClass="LogeInController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ao2-Hn-0Em">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-pq-G3x">
-                                <rect key="frame" x="62" y="236" width="250" height="81"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g4H-z1-mmE">
+                                <rect key="frame" x="50" y="262.5" width="275" height="162"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sju-iJ-xLD">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vsq-uf-pdD">
-                                        <rect key="frame" x="0.0" y="51" width="250" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-pq-G3x">
+                                        <rect key="frame" x="45" y="0.0" width="185" height="132"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sju-iJ-xLD">
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vsq-uf-pdD">
+                                                <rect key="frame" x="0.0" y="51" width="185" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0T-Ck-2od">
+                                                <rect key="frame" x="0.0" y="102" width="185" height="30"/>
+                                                <state key="normal" title="忘记密码？">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="findPWact:" destination="7eS-jD-SPh" eventType="touchUpInside" id="7bC-6T-evw"/>
+                                                    <segue destination="DyA-lK-7xw" kind="presentation" id="7ap-We-oQb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-0U-vMF">
+                                        <rect key="frame" x="45" y="132" width="185" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-9o-fC1">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                                <state key="normal" title="登录">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Logact:" destination="7eS-jD-SPh" eventType="touchUpInside" id="kDD-ju-Vat"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w7-ub-J52">
+                                                <rect key="frame" x="154" y="0.0" width="31" height="30"/>
+                                                <state key="normal" title="注册">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="SiginAct:" destination="7eS-jD-SPh" eventType="touchUpInside" id="B4Q-Mq-BS1"/>
+                                                    <segue destination="p33-hA-RSE" kind="presentation" id="znF-4q-0LP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="1aE-yp-Hmx"/>
-                                    <constraint firstAttribute="width" constant="250" id="kxm-Xf-bEd"/>
+                                    <constraint firstItem="B1g-pq-G3x" firstAttribute="width" secondItem="GzA-0U-vMF" secondAttribute="width" id="H2q-Gn-bWj"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0T-Ck-2od">
-                                <rect key="frame" x="62" y="335" width="77" height="30"/>
-                                <state key="normal" title="忘记密码？">
-                                    <color key="titleColor" red="0.12268845266464878" green="0.67761102112364091" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="findPWact:" destination="7eS-jD-SPh" eventType="touchUpInside" id="7bC-6T-evw"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-0U-vMF">
-                                <rect key="frame" x="95" y="404" width="185" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-9o-fC1">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="登录">
-                                            <color key="titleColor" red="0.12268845270000001" green="0.67761102110000004" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Logact:" destination="7eS-jD-SPh" eventType="touchUpInside" id="kDD-ju-Vat"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w7-ub-J52">
-                                        <rect key="frame" x="154" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="注册">
-                                            <color key="titleColor" red="0.12268845270000001" green="0.67761102110000004" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="SiginAct:" destination="7eS-jD-SPh" eventType="touchUpInside" id="B4Q-Mq-BS1"/>
-                                            <segue destination="p33-hA-RSE" kind="presentation" id="znF-4q-0LP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="Qkw-nc-4xv"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrn-CI-9H5">
+                                <rect key="frame" x="129" y="168.5" width="116.5" height="30.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Instagram">
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="Apple-Chancery"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.10948849720928144" green="0.71198089820413568" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="R0T-Ck-2od" firstAttribute="top" secondItem="B1g-pq-G3x" secondAttribute="bottom" constant="18" id="8II-ka-yE0"/>
-                            <constraint firstItem="GzA-0U-vMF" firstAttribute="centerX" secondItem="7VB-au-uMJ" secondAttribute="centerX" id="DrS-At-UV6"/>
-                            <constraint firstItem="GzA-0U-vMF" firstAttribute="top" secondItem="R0T-Ck-2od" secondAttribute="bottom" constant="39" id="TxR-eD-ho5"/>
-                            <constraint firstItem="R0T-Ck-2od" firstAttribute="leading" secondItem="7VB-au-uMJ" secondAttribute="leading" constant="62" id="gfB-gs-nvc"/>
-                            <constraint firstItem="B1g-pq-G3x" firstAttribute="leading" secondItem="7VB-au-uMJ" secondAttribute="leading" constant="62" id="mks-Ey-ELK"/>
-                            <constraint firstItem="B1g-pq-G3x" firstAttribute="top" secondItem="7VB-au-uMJ" secondAttribute="top" constant="192" id="ryt-vo-aLY"/>
-                            <constraint firstItem="7VB-au-uMJ" firstAttribute="trailing" secondItem="B1g-pq-G3x" secondAttribute="trailing" constant="63" id="t96-YN-hRn"/>
+                            <constraint firstItem="g4H-z1-mmE" firstAttribute="top" secondItem="zrn-CI-9H5" secondAttribute="bottom" constant="63.5" id="Byn-9L-aiw"/>
+                            <constraint firstItem="7VB-au-uMJ" firstAttribute="trailing" secondItem="g4H-z1-mmE" secondAttribute="trailing" constant="50" id="ME7-Xh-tgz"/>
+                            <constraint firstItem="g4H-z1-mmE" firstAttribute="centerY" secondItem="7VB-au-uMJ" secondAttribute="centerY" id="WGi-8r-bVz"/>
+                            <constraint firstItem="g4H-z1-mmE" firstAttribute="centerX" secondItem="7VB-au-uMJ" secondAttribute="centerX" id="iuJ-1V-rQh"/>
+                            <constraint firstItem="zrn-CI-9H5" firstAttribute="centerX" secondItem="7VB-au-uMJ" secondAttribute="centerX" id="ixR-yW-1YU"/>
+                            <constraint firstItem="g4H-z1-mmE" firstAttribute="leading" secondItem="7VB-au-uMJ" secondAttribute="leading" constant="50" id="mG9-V1-HKS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7VB-au-uMJ"/>
                     </view>
@@ -129,22 +150,26 @@
             <objects>
                 <viewController id="p33-hA-RSE" customClass="SiginController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3fu-wP-4u4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-z2-cmk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgz-KZ-wU8">
                                         <rect key="frame" x="172" y="628" width="31" height="30"/>
-                                        <state key="normal" title="确定"/>
+                                        <state key="normal" title="确定">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="zhcue:" destination="p33-hA-RSE" eventType="touchUpInside" id="Jvq-B1-5SZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJf-ab-QFp">
                                         <rect key="frame" x="172" y="666" width="31" height="30"/>
-                                        <state key="normal" title="取消"/>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="cancel:" destination="p33-hA-RSE" eventType="touchUpInside" id="b0s-Yb-H6t"/>
                                         </connections>
@@ -236,6 +261,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.10948849720000001" green="0.71198089819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Sgz-KZ-wU8" firstAttribute="leading" secondItem="pJf-ab-QFp" secondAttribute="leading" id="0Kd-wN-9DW"/>
                                     <constraint firstAttribute="trailing" secondItem="1Eb-wK-8Xk" secondAttribute="trailing" constant="62" id="2Tp-yh-IX8"/>
@@ -289,7 +315,7 @@
                     <tabBarItem key="tabBarItem" title="主页" id="LIe-vQ-lXq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tai-gS-YkU">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -299,7 +325,73 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feu-ZE-lta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="37.684729064039409"/>
+            <point key="canvasLocation" x="1652" y="72"/>
+        </scene>
+        <!--Re SetPW Controller-->
+        <scene sceneID="v9k-g2-8kg">
+            <objects>
+                <viewController storyboardIdentifier="RESETPASSWORD" id="DyA-lK-7xw" customClass="ReSetPWController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8u-c8-8cC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入您的电子邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d4-OJ-do5">
+                                <rect key="frame" x="59" y="199" width="256" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgN-fy-J4q">
+                                <rect key="frame" x="70" y="273" width="234" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OM-8r-36U">
+                                <rect key="frame" x="148" y="359" width="78" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="确认重置">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reSet:" destination="DyA-lK-7xw" eventType="touchUpInside" id="HYw-Qz-IQa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-cJ-4CS">
+                                <rect key="frame" x="172" y="416" width="31" height="30"/>
+                                <state key="normal" title="取消">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="DyA-lK-7xw" eventType="touchUpInside" id="k0b-zg-zxD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10948849720000001" green="0.71198089819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8d4-OJ-do5" firstAttribute="leading" secondItem="pY6-NC-jnX" secondAttribute="leading" constant="59" id="1DR-ap-Iud"/>
+                            <constraint firstItem="CmW-cJ-4CS" firstAttribute="top" secondItem="9OM-8r-36U" secondAttribute="bottom" constant="22" id="6SD-IQ-uFO"/>
+                            <constraint firstItem="CmW-cJ-4CS" firstAttribute="leading" secondItem="pY6-NC-jnX" secondAttribute="leading" constant="172" id="7yq-W0-1RM"/>
+                            <constraint firstItem="NgN-fy-J4q" firstAttribute="top" secondItem="8d4-OJ-do5" secondAttribute="bottom" constant="51" id="EAD-81-LuI"/>
+                            <constraint firstItem="pY6-NC-jnX" firstAttribute="trailing" secondItem="NgN-fy-J4q" secondAttribute="trailing" constant="71" id="NDC-km-zZ8"/>
+                            <constraint firstItem="pY6-NC-jnX" firstAttribute="trailing" secondItem="9OM-8r-36U" secondAttribute="trailing" constant="149" id="Qx2-B8-fKk"/>
+                            <constraint firstItem="pY6-NC-jnX" firstAttribute="trailing" secondItem="CmW-cJ-4CS" secondAttribute="trailing" constant="172" id="dOn-w8-1xg"/>
+                            <constraint firstItem="9OM-8r-36U" firstAttribute="top" secondItem="NgN-fy-J4q" secondAttribute="bottom" constant="56" id="dqh-Sd-D74"/>
+                            <constraint firstItem="pY6-NC-jnX" firstAttribute="trailing" secondItem="8d4-OJ-do5" secondAttribute="trailing" constant="60" id="edd-rc-uoY"/>
+                            <constraint firstItem="8d4-OJ-do5" firstAttribute="top" secondItem="pY6-NC-jnX" secondAttribute="top" constant="179" id="gu2-9j-Bet"/>
+                            <constraint firstItem="NgN-fy-J4q" firstAttribute="leading" secondItem="pY6-NC-jnX" secondAttribute="leading" constant="70" id="jY6-6H-j5d"/>
+                            <constraint firstItem="9OM-8r-36U" firstAttribute="leading" secondItem="pY6-NC-jnX" secondAttribute="leading" constant="148" id="ySj-br-n0W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pY6-NC-jnX"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="NgN-fy-J4q" id="Brz-Ku-Gf0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIW-ka-cyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="71.674876847290648"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8XP-Ks-mpv">
@@ -307,6 +399,7 @@
                 <tabBarController storyboardIdentifier="TabView" automaticallyAdjustsScrollViewInsets="NO" id="1Xc-Xw-PeO" customClass="TabBarController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4XJ-px-CW9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -316,7 +409,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHx-wZ-Rsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.60000000000002" y="37.684729064039409"/>
+            <point key="canvasLocation" x="790" y="72"/>
         </scene>
     </scenes>
     <resources>

@@ -16,6 +16,7 @@
 		D304CF5820CE40490068D954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D304CF5720CE40490068D954 /* Assets.xcassets */; };
 		D304CF5B20CE40490068D954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304CF5920CE40490068D954 /* LaunchScreen.storyboard */; };
 		D3B4ED6F20D8EF4700AAA439 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4ED6E20D8EF4700AAA439 /* TabBarController.swift */; };
+		D3B8C3B420D9F50600C1C0B0 /* ReSetPWController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8C3B320D9F50600C1C0B0 /* ReSetPWController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D304CF5C20CE40490068D954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3B4ED6B20D8E53800AAA439 /* Ins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ins-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3B4ED6E20D8EF4700AAA439 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D3B8C3B320D9F50600C1C0B0 /* ReSetPWController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSetPWController.swift; sourceTree = "<group>"; };
 		F816273E9AB250B567AE69B4 /* Pods-Ins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ins.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ins/Pods-Ins.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 				88A687A420CEB46D00C2D840 /* LogeInController.swift */,
 				8816E90120CFEE70000CD733 /* SiginController.swift */,
 				D3B4ED6E20D8EF4700AAA439 /* TabBarController.swift */,
+				D3B8C3B320D9F50600C1C0B0 /* ReSetPWController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				88A687A520CEB46D00C2D840 /* LogeInController.swift in Sources */,
 				D304CF5320CE403F0068D954 /* ViewController.swift in Sources */,
+				D3B8C3B420D9F50600C1C0B0 /* ReSetPWController.swift in Sources */,
 				8816E90220CFEE70000CD733 /* SiginController.swift in Sources */,
 				D3B4ED6F20D8EF4700AAA439 /* TabBarController.swift in Sources */,
 				D304CF5120CE403F0068D954 /* AppDelegate.swift in Sources */,
@@ -389,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QG6XQ82574;
+				DEVELOPMENT_TEAM = XY7VJRNTLY;
 				INFOPLIST_FILE = Ins/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QG6XQ82574;
+				DEVELOPMENT_TEAM = XY7VJRNTLY;
 				INFOPLIST_FILE = Ins/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

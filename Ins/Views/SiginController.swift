@@ -52,16 +52,39 @@ class SiginController: UIViewController,UITextFieldDelegate,UIImagePickerControl
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == self.name {
+        if textField == self.username {
             self.username.resignFirstResponder()
             self.password.becomeFirstResponder()
+        }
+        if textField == self.password {
+            self.password.resignFirstResponder()
+            self.password2th.becomeFirstResponder()
+        }
+        if textField == self.password2th {
+            self.password2th.resignFirstResponder()
+            self.email.becomeFirstResponder()
+        }
+        if textField == self.email {
+            self.email.resignFirstResponder()
+            self.name.becomeFirstResponder()
+        }
+        if textField == name {
+            self.name.resignFirstResponder()
+            self.jianjie.becomeFirstResponder()
+        }
+        if textField == jianjie {
+            self.jianjie.resignFirstResponder()
+            self.websit.becomeFirstResponder()
+        }
+        if textField == websit {
+            self.websit.resignFirstResponder()
         }
         return true
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
-        self.scview.contentSize = CGSize(width: self.view.frame.width, height: 800)
+        self.scview.contentSize = CGSize(width: self.view.frame.width, height: 900)
     }
     
     @IBAction func zhcue(_ sender: Any) {
@@ -95,7 +118,7 @@ class SiginController: UIViewController,UITextFieldDelegate,UIImagePickerControl
                 let AVfile = AVFile(data: imgdata!, name: "头像")
                 user["image"] = AVfile
                 user.signUpInBackground { (result, error) in
-             
+                    self.userdef.set(user.objectId, forKey: "userID")
                     if result {
                         self.userdef.set(self.username.text!, forKey: "username")
                         let alt = UIAlertController(title: "注册成功", message: "", preferredStyle: .alert)
@@ -116,6 +139,7 @@ class SiginController: UIViewController,UITextFieldDelegate,UIImagePickerControl
     }
     
     @IBAction func cancel(_ sender: Any) {
+        self.view.endEditing(true)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -124,14 +148,13 @@ class SiginController: UIViewController,UITextFieldDelegate,UIImagePickerControl
         let rect = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
         keyboardsize = rect as? CGRect
         print(keyboardsize)
-        //当虚拟键盘出现以后，将滚动师徒的实际高度所有为屏幕高度减去键盘的高度
+        //当虚拟键盘出现以后，将滚动视图的实际高度所有为屏幕高度减去键盘的高度
         UIView.animate(withDuration: 0.4) {
             self.scview.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height:  (self.scview.frame.height - self.keyboardsize.height))
         }
     }
     
     @objc func hideKeyboarf(notification: Notification){
-        
         UIView.animate(withDuration: 0.4) {
             self.scview.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height:  self.view.frame.height)
         }

@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let tabView = storyboard.instantiateViewController(withIdentifier: "TabView") as! TabBarController
             self.window?.rootViewController = tabView
         }
+        //跟踪统计应用打开的情况
+        AVAnalytics.trackAppOpened(launchOptions: launchOptions)
         return true
     }
 

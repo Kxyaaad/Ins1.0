@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let userdef = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func logout(_ sender: Any) {
+        
+        self.userdef.set(nil, forKey: "username")
+        self.userdef.set(nil, forKey: "userID")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "LOGIN") as! LogeInController
+        self.present(vc, animated: true, completion: nil)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
