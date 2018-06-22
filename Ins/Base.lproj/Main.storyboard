@@ -415,7 +415,7 @@
         <!--我-->
         <scene sceneID="PDx-sF-fj5">
             <objects>
-                <collectionViewController id="MYy-Jq-tsu" customClass="MeController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MEVC" id="MYy-Jq-tsu" customClass="MeController" customModule="Ins" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5CE-tO-ryN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -449,7 +449,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-oT-dJu">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="修改头像" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-oT-dJu">
                                     <rect key="frame" x="20" y="8" width="80" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
@@ -518,6 +518,7 @@
                                 <outlet property="guanzhu" destination="Fow-NE-YMJ" id="NeP-E5-3fH"/>
                                 <outlet property="img" destination="1PY-oT-dJu" id="oUR-O2-G3I"/>
                                 <outlet property="tiezi" destination="FmJ-Uh-29X" id="rez-1x-Lvq"/>
+                                <outlet property="username" destination="vrO-vC-OJ6" id="mma-FC-rky"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -529,7 +530,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8T1-P5-8Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.60000000000002" y="796.55172413793105"/>
+            <point key="canvasLocation" x="790" y="814"/>
         </scene>
     </scenes>
     <resources>

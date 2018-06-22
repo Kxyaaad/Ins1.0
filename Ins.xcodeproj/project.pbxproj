@@ -55,20 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		883BEAA520DA93BD000CCA5B /* MECONTROLLER */ = {
+		883BEAA520DA93BD000CCA5B /* ME_CONTROLLER */ = {
 			isa = PBXGroup;
 			children = (
 				883BEA9F20DA91D9000CCA5B /* MeController.swift */,
 				883BEAA120DA91FC000CCA5B /* HeaderView.swift */,
 				883BEAA320DA9359000CCA5B /* PictureCell.swift */,
 			);
-			path = MECONTROLLER;
+			path = ME_CONTROLLER;
 			sourceTree = "<group>";
 		};
 		88A687A320CEB43D00C2D840 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				883BEAA520DA93BD000CCA5B /* MECONTROLLER */,
+				883BEAA520DA93BD000CCA5B /* ME_CONTROLLER */,
 				D304CF5220CE403F0068D954 /* ViewController.swift */,
 				88A687A420CEB46D00C2D840 /* LogeInController.swift */,
 				8816E90120CFEE70000CD733 /* SiginController.swift */,

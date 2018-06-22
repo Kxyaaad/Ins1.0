@@ -10,6 +10,8 @@ import UIKit
 
 class HeaderView: UICollectionReusableView {
     
+    @IBOutlet weak var username: UILabel!
+    
     @IBOutlet weak var img: UIImageView!
     
     @IBOutlet weak var tiezi: UILabel!
