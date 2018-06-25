@@ -19,4 +19,5 @@ class HeaderView: UICollectionReusableView {
     @IBOutlet weak var fensi: UILabel!
     
     @IBOutlet weak var guanzhu: UILabel!
+    
 }

@@ -68,8 +68,8 @@
 		88A687A320CEB43D00C2D840 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D317542020E0C3080032C97C /* MAIN_VC */,
 				883BEAA520DA93BD000CCA5B /* ME_CONTROLLER */,
-				D304CF5220CE403F0068D954 /* ViewController.swift */,
 				88A687A420CEB46D00C2D840 /* LogeInController.swift */,
 				8816E90120CFEE70000CD733 /* SiginController.swift */,
 				D3B4ED6E20D8EF4700AAA439 /* TabBarController.swift */,
@@ -117,6 +117,14 @@
 				D3B4ED6B20D8E53800AAA439 /* Ins-Bridging-Header.h */,
 			);
 			path = Ins;
+			sourceTree = "<group>";
+		};
+		D317542020E0C3080032C97C /* MAIN_VC */ = {
+			isa = PBXGroup;
+			children = (
+				D304CF5220CE403F0068D954 /* ViewController.swift */,
+			);
+			path = MAIN_VC;
 			sourceTree = "<group>";
 		};
 		F1D8DB8D34E974CE32AE344F /* Frameworks */ = {

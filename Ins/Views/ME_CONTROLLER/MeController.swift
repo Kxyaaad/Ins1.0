@@ -11,7 +11,12 @@ import UIKit
 //private let reuseIdentifier = "Cell"
 
 class MeController: UICollectionViewController {
-
+    //刷新控件
+    var refresh : UIRefreshControl!
+    //每页载入帖子的数量
+    var page : Int = 12
+    var puuidArray = [String]()
+    var picArray = [AVFile]()
     override func viewDidLoad() {
         super.viewDidLoad()
         print("加载成功")
@@ -19,11 +24,43 @@ class MeController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+   
+        self.navigationItem.title = AVUser.current()?.object(forKey: "username") as! String
         // Do any additional setup after loading the view.
-    }
+        //初始化刷新控件
+        refresh = UIRefreshControl()
+        refresh.contentScaleFactor = 20
+        refresh.addTarget(self, action: #selector(refreshfunc), for: UIControlEvents.valueChanged)
+        collectionView?.addSubview(refresh)
+        loadpost()
 
+    }
+    
+    @objc func refreshfunc() {
+        refresh.beginRefreshing()
+        collectionView?.reloadData()
+    }
+    
+    func loadpost() {
+        let quary = AVQuery(className: "Post")
+        quary.whereKey("username", equalTo: AVUser.current()?.object(forKey: "username"))
+        quary.limit = page
+        quary.findObjectsInBackground { (objects:[Any]?, error) in
+            if error == nil {
+                self.puuidArray.removeAll(keepingCapacity: false)
+                self.picArray.removeAll(keepingCapacity: false)
+                
+                for object in objects! {
+                    self.puuidArray.append((object as AnyObject).value(forKey: "puuid") as! String)
+                    self.picArray.append((object as AnyObject).value(forKey: "Pic") as! AVFile)
+                }
+               self.collectionView?.reloadData()
+            }else{
+                print(error)
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,28 +80,41 @@ class MeController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return picArray.count
     }
 
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-//
-//        // Configure the cell
-//
-//        return cell
-//    }
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PictureCell
+        picArray[indexPath.row].getDataInBackground { (data, error) in
+            if error == nil{
+                cell.PicCell.image = UIImage(data: data!)
+            }else{
+                print(error)
+            }
+        }
+        return cell
+    }
 
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = self.collectionView?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Header", for: indexPath) as! HeaderView
         let user = AVUser.current()
         header.username.text = user?.object(forKey: "username") as? String
+        let avquery = user?.object(forKey: "image") as! AVFile
+        header.img.layer.cornerRadius = 10
+        OperationQueue.main.addOperation {
+            avquery.getDataInBackground { (data, error) in
+                header.img.image = UIImage(data: data!)
+            }
+        }
+        
+        print("加载个人资料")
         return header
     }
     // MARK: UICollectionViewDelegate

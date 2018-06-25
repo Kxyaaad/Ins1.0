@@ -38,6 +38,11 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>是否允许使用相册</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
