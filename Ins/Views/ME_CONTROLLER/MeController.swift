@@ -31,14 +31,16 @@ class MeController: UICollectionViewController {
         refresh = UIRefreshControl()
         refresh.contentScaleFactor = 20
         refresh.addTarget(self, action: #selector(refreshfunc), for: UIControlEvents.valueChanged)
-        collectionView?.addSubview(refresh)
+        //设置collectionview总是可以反弹，以便在cell数量少的时候也能下拉刷新
+        collectionView?.alwaysBounceVertical = true
+        self.collectionView?.addSubview(refresh)
         loadpost()
 
     }
     
     @objc func refreshfunc() {
         refresh.beginRefreshing()
-        collectionView?.reloadData()
+       loadpost()
     }
     
     func loadpost() {
@@ -54,11 +56,14 @@ class MeController: UICollectionViewController {
                     self.puuidArray.append((object as AnyObject).value(forKey: "puuid") as! String)
                     self.picArray.append((object as AnyObject).value(forKey: "Pic") as! AVFile)
                 }
-               self.collectionView?.reloadData()
+                self.collectionView?.reloadData()
+                self.refresh.endRefreshing()
             }else{
                 print(error)
             }
         }
+       
+   
     }
     
     override func didReceiveMemoryWarning() {
